@@ -1,0 +1,142 @@
+:root {
+    --pad: 16px;
+    --radius: 14px;
+    --maxw: 980px;
+    --brand: #0A66C2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    color: #222;
+    background: #fafafa;
+}
+
+header {
+    padding: calc(var(--pad)*2) var(--pad);
+    text-align: center;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+h1 {
+    margin: 0 0 6px;
+}
+
+.lead {
+    margin: 0;
+    color: #555;
+}
+
+section {
+    max-width: var(--maxw);
+    margin: 24px auto;
+    padding: 0 var(--pad);
+}
+
+.gallery .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+figure {
+    margin: 0;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #444;
+}
+
+.comments form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+#cinput {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #222;
+    color: white;
+    cursor: pointer;
+}
+
+ul#clist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+}
+
+ul#clist li {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+ul#clist small {
+    color: #666;
+    margin-left: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    color: #777;
+}
+
+.badge{
+  display:inline-block; padding:4px 10px; border-radius:999px;
+  background:var(--brand); color:#fff; font-size:12px; letter-spacing:.2px;
+}
+
+header .avatar{
+  border-radius:50%; object-fit:cover;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+  border:4px solid #fff; margin-top:12px;
+}
+
+/* Efecto hover a las tarjetas de galería */
+.gallery .grid figure{ transition: transform .2s ease, box-shadow .2s ease; }
+.gallery .grid figure:hover{ transform: translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.10); }
+
+/* Estados de enfoque visibles (accesibilidad) */
+button:focus-visible, input:focus-visible, a:focus-visible{
+  outline:2px solid var(--brand); outline-offset:2px;
+}
+
+/* Etiquetas solo para lectores de pantalla */
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}

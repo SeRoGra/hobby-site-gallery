@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Hobby de Sebastián Rodríguez Granja: Videojuegos, galería y comentarios.">
+  <title>Mi Hobby — Sitio Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <span class="badge">Mi Hobby</span>
+    <h1>Videojuegos</h1>
+
+    <a href="https://www.linkedin.com/in/sebastian-rodriguez-granja-b96804137/" target="_blank"
+      rel="noopener noreferrer" aria-label="Perfil de LinkedIn">
+      <img src="assets/images/profile.jpeg" class="avatar" width="200" height="200"
+        alt="Foto de Sebastián Rodríguez Granja">
+    </a>
+
+    <p class="lead">Sebastian Rodríguez Granja</p>
+  </header>
+
+  <section class="gallery">
+    <h2>Galería</h2>
+    <div class="grid">
+      <figure><img src="https://picsum.photos/seed/1/400/260" alt="img 1" width="400" height="260" loading="lazy"
+          decoding="async" >
+        <figcaption>Imagen 1</figcaption>
+      </figure>
+      <figure><img src="https://picsum.photos/seed/2/400/260" alt="img 2" width="400" height="260" loading="lazy"
+          decoding="async" >
+        <figcaption>Imagen 2</figcaption>
+      </figure>
+      <figure><img src="https://picsum.photos/seed/3/400/260" alt="img 3" width="400" height="260" loading="lazy"
+          decoding="async" >
+        <figcaption>Imagen 3</figcaption>
+      </figure>
+      <figure><img src="https://picsum.photos/seed/4/400/260" alt="img 4" width="400" height="260" loading="lazy"
+          decoding="async" >
+        <figcaption>Imagen 4</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="comments">
+    <h2>Deja tu comentario</h2>
+    <form id="cform">
+      <label for="cinput" class="sr-only">Comentario</label>
+      <input id="cinput" maxlength="200" placeholder="Escribe aquí..." required aria-label="Comentario" />
+      <button type="submit">Enviar</button>
+    </form>
+    <ul id="clist"></ul>
+  </section>
+
+
+  <footer>
+    <small>Realizado por: Sebastian Rodríguez Granja</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
