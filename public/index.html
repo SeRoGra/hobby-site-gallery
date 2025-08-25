@@ -12,6 +12,30 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
+<div id="introModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true"
+  aria-labelledby="introTitle" aria-describedby="introDesc">
+  <div class="modal-card" role="document">
+    <h2 id="introTitle">¡Bienvenido!</h2>
+
+    <p id="introDesc">
+      En mi casa siempre hubo computadores —mi papá es ingeniero— desde ahí nació mi curiosidad por la tecnología y
+      los videojuegos. La primera consola que compré con mis ahorros fue una “PolyStation” a los 10 años; recuerdo las
+      tardes de puntería derribando patos. <br><br>
+      Luego de 15 años quice dar el salto a la: PS4 y PS5. Quería vivir <em>God of War Ragnarök</em>, compartir partidas
+      en <em>It Takes Two</em> y probar nuevas propuestas como <em>Split Fiction</em>. <br><br>
+      Este sitio recoge ese gusto: una galería de lo que juego y un espacio para compartir comentarios.
+    </p>
+
+    <label class="remember">
+      <input type="checkbox" id="dontShow"> No volver a mostrar
+    </label>
+
+    <div class="actions">
+      <button id="introOk" type="button">Entendido</button>
+    </div>
+  </div>
+</div>
+
 <body>
   <header>
     <span class="badge">Mi Hobby</span>
@@ -35,7 +59,7 @@
       </figure>
       <figure><img src="assets/games/god-of-war-ragnarok.jpeg" alt="img 2" width="400" height="260" loading="lazy"
           decoding="async">
-        <figcaption>God Of War: Ragnarok</figcaption>
+        <figcaption>God Of War: Ragnarök</figcaption>
       </figure>
       <figure><img src="assets/games/f1-25.jpeg" alt="img 3" width="400" height="260" loading="lazy" decoding="async">
         <figcaption>F1 2025</figcaption>
@@ -63,7 +87,8 @@
     <small>Realizado por: Sebastian Rodríguez Granja</small>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/intro-modal.js" defer></script>
+  <script src="js/comments.js" defer></script>
 </body>
 
 </html>

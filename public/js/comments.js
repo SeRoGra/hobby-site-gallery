@@ -22,7 +22,6 @@ document.getElementById("cform").addEventListener("submit", async (e) => {
   const text = input.value.trim();
   if (!text) return;
 
-  // protección extra en cliente
   if (text.length > MAX) {
     alert(`Máximo ${MAX} caracteres`);
     return;
