@@ -77,6 +77,9 @@ curl -s -X POST http://localhost:3000/comments   -H "Content-Type: application/j
    ├─ index.html
    ├─ styles.css
    ├─ script.js
+   ├─ /js
+      ├─ comments.js
+      └─ intro-modal.js
    └─ /assets
       ├─ /images
       └─ /logos
