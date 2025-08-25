@@ -3,6 +3,7 @@ const app = express();
 
 // In-memory storage for comments (resets on restart)
 const comments = [];
+const MAX_CHARS = 200;
 
 app.use(express.json());
 app.use(express.static("public"));
@@ -19,6 +20,9 @@ app.get("/comments", (_, res) => {
 app.post("/comments", (req, res) => {
   const text = (req.body?.text || "").trim();
   if (!text) return res.status(400).json({ error: "Comentario vacío" });
+  if (text.length > MAX_CHARS) {
+    return res.status(400).json({ error: `Máximo ${MAX_CHARS} caracteres` });
+  }
   const item = { text, date: new Date().toISOString() };
   comments.push(item);
   res.status(201).json(item);
