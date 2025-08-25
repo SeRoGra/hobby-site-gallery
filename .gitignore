@@ -7,6 +7,7 @@ coverage/
 .nyc_output/
 dist/
 build/
+package-lock.json
 
 # ── OS/IDE ───────────────────────────────────────────
 .DS_Store

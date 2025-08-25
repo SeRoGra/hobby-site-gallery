@@ -44,6 +44,14 @@ section {
     gap: 12px;
 }
 
+.gallery .grid img {
+    width: 100%;
+    aspect-ratio: 28 / 17;
+    object-fit: cover;
+    display: block;
+}
+
+
 figure {
     margin: 0;
     background: white;

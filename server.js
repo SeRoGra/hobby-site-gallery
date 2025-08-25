@@ -9,7 +9,10 @@ app.use(express.static("public"));
 
 // API: get all comments
 app.get("/comments", (_, res) => {
-  res.json(comments);
+  const sorted = [...comments].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+  res.json(sorted);
 });
 
 // API: create a new comment
