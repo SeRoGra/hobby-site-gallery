@@ -36,6 +36,22 @@
   </div>
 </div>
 
+<div id="videoModal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true"
+  aria-labelledby="videoTitle">
+  <div class="modal-card video-card" role="document">
+    <div class="video-header">
+      <h3 id="videoTitle">Tráiler</h3>
+      <button id="videoClose" class="close-btn" aria-label="Cerrar">✕</button>
+    </div>
+
+    <div class="video-wrap">
+      <iframe id="videoFrame" title="Tráiler" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen
+        loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+
+
 <body>
   <header>
     <span class="badge">Mi Hobby</span>
@@ -53,19 +69,22 @@
   <section class="gallery">
     <h2>Galería</h2>
     <div class="grid">
-      <figure><img src="assets/games/the-last-of-us-part-1.jpeg" alt="img 1" width="400" height="260" loading="lazy"
+      <figure data-title="The Last Of Us Part I" data-trailer="https://www.youtube.com/watch?v=8a3Aga7JJgE"><img
+          src="assets/games/the-last-of-us-part-1.jpeg" alt="img 1" width="400" height="260" loading="lazy"
           decoding="async">
         <figcaption>The Last Of Us Part 1</figcaption>
       </figure>
-      <figure><img src="assets/games/god-of-war-ragnarok.jpeg" alt="img 2" width="400" height="260" loading="lazy"
+      <figure data-title="God of War Ragnarök" data-trailer="https://www.youtube.com/watch?v=F3jePdO9_jc"><img
+          src="assets/games/god-of-war-ragnarok.jpeg" alt="img 2" width="400" height="260" loading="lazy"
           decoding="async">
         <figcaption>God Of War: Ragnarök</figcaption>
       </figure>
-      <figure><img src="assets/games/f1-25.jpeg" alt="img 3" width="400" height="260" loading="lazy" decoding="async">
+      <figure data-title="F1 25" data-trailer="https://www.youtube.com/watch?v=u5rWBgBjDsc"><img
+          src="assets/games/f1-25.jpeg" alt="img 3" width="400" height="260" loading="lazy" decoding="async">
         <figcaption>F1 2025</figcaption>
       </figure>
-      <figure><img src="assets/games/split-fiction.jpeg" alt="img 4" width="400" height="260" loading="lazy"
-          decoding="async">
+      <figure data-title="Split Fiction" data-trailer="https://www.youtube.com/watch?v=Kd-6GIkof8s"><img
+          src="assets/games/split-fiction.jpeg" alt="img 4" width="400" height="260" loading="lazy" decoding="async">
         <figcaption>Split Fiction</figcaption>
       </figure>
     </div>
@@ -88,6 +107,7 @@
   </footer>
 
   <script src="js/intro-modal.js" defer></script>
+  <script src="js/trailer-modal.js" defer></script>
   <script src="js/comments.js" defer></script>
 </body>
 

@@ -234,3 +234,69 @@ a:focus-visible {
 body.modal-open {
     overflow: hidden;
 }
+
+/* ── Ajustes para video ───────────────────────────── */
+.video-card {
+    width: min(92vw, 960px);
+    padding: 10px 12px 14px;
+}
+
+.video-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.close-btn {
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: #e6e6e6;
+}
+
+/* Contenedor 16:9 responsivo */
+.video-wrap {
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Hacer visible que la tarjeta es clickeable */
+.gallery .grid figure[data-trailer] {
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery .grid figure[data-trailer]::after {
+    content: "▶";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 48px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, .5);
+    opacity: 0;
+    transition: opacity .2s ease;
+    background: rgba(0, 0, 0, .0);
+}
+
+.gallery .grid figure[data-trailer]:hover::after {
+    opacity: .9;
+    background: rgba(0, 0, 0, .15);
+}
